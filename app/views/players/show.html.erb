@@ -1,0 +1,17 @@
+<h1><%= @player.name %></h1>
+
+
+<p>Grade: <%= @player.grade %></p>
+<p>Primary Position: <%= @player.position1 %></p>
+<p>2nd Position: <%= @player.position2 %></p>
+<p>3rd Position: <%= @player.position3 %></p>
+<p>Team: <%= @player.team_id %></p>
+
+
+
+
+<%= link_to "Back to Roster", players_path %>
+
+<%= link_to "Edit", edit_player_path %>
+
+<%= link_to "Delete Player", player_path(@player), method: :delete, data: { confirm: "Are you sure you want to delete this player?"} %>
