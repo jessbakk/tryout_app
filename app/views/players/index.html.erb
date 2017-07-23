@@ -28,13 +28,10 @@
         <td><%= player.team_id %></td>
         <td><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Action</a>
          <ul id='dropdown1' class='dropdown-content'>
-            <li><%= link_to "Edit", edit_player_path(player) %></li>
-            <li><%= link_to "Delete", player_path(player), method: :delete, data: { confirm: "Are you sure you want to delete this player?"} %></li>
+            <li><%= link_to 'Edit Player', edit_player_path(player) %></li>
          </ul>    
-         </td>    
-        
+        </td>    
       </tr>
-     
     <% end %>
   </tbody>
 

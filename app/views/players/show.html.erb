@@ -1,12 +1,19 @@
-<h1><%= @player.name %></h1>
 
+<div class="col s7 push-s5">
+    <%= image_tag @player.image.url %>
+</div>
 
-<p>Grade: <%= @player.grade %></p>
-<p>Primary Position: <%= @player.position1 %></p>
-<p>2nd Position: <%= @player.position2 %></p>
-<p>3rd Position: <%= @player.position3 %></p>
-<p>Team: <%= @player.team_id %></p>
-<%= image_tag @player.image.url %>
+<div class="col s5 pull-s7">
+    <h1><%= @player.name %></h1>
+    <p>Grade: <%= @player.grade %></p>
+    <p>Primary Position: <%= @player.position1 %></p>
+    <p>2nd Position: <%= @player.position2 %></p>
+    <p>3rd Position: <%= @player.position3 %></p>
+    <p>Coordinated: <%= @player.coordinated %></p>
+    <p>Club Experience: <%= @player.club_exp %></p>
+    <p>Team: <%= @player.team_id %></p>
+</div>
+
 
 
 

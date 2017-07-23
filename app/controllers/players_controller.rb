@@ -33,7 +33,7 @@ class PlayersController < ApplicationController
        @player = Player.find(params[:id])
         if 
             @player.update_attributes(player_params)
-            redirect_to players_path
+            redirect_to player_path
         else
             render :edit
         end
