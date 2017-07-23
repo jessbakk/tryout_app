@@ -1,4 +1,4 @@
-<h1>Player List</h1>
+<h1>Prospect List</h1>
 
 <table>
   <thead>
@@ -27,10 +27,9 @@
         <td><%= player.club_exp %></td>
         <td><%= player.team_id %></td>
         <td><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Action</a>
-
          <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="#!">Edit</a></li>
-            <li><a href="#!">Delete</a></li>
+            <li><%= link_to "Edit", edit_player_path(player) %></li>
+            <li><%= link_to "Delete", player_path(player), method: :delete, data: { confirm: "Are you sure you want to delete this player?"} %></li>
          </ul>    
          </td>    
         
