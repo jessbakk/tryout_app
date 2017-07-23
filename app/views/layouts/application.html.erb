@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TryoutApp</title>
+    <title>Tryouts</title>
     <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/js/materialize.min.js"></script>
+  
    
     <%= csrf_meta_tags %>
 
@@ -20,7 +20,7 @@
 
   <p class="right-align">
     <% if current_coach %>
-      Welcome, <%= current_coach.name %>
+      Welcome, Coach <%= current_coach.name %>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
     <% else %>
@@ -34,5 +34,6 @@
 
     
     <%= yield %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/js/materialize.min.js"></script>
   </body>
 </html>

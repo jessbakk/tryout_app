@@ -26,9 +26,30 @@
         <td><%= player.coordinated %></td>
         <td><%= player.club_exp %></td>
         <td><%= player.team_id %></td>
-        
+        <td><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Action</a></td>
+
+         <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+         </ul>        
         
       </tr>
+
+       <a class='dropdown-button btn' data-activates='dropdown2'>Drop Me!</a>
+
+        <!-- Dropdown Structure -->
+        <ul id='dropdown2' class='dropdown-content'>
+          <li><a href="#!">one</a></li>
+          <li><a href="#!">two</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">three</a></li>
+          <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+          <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+        </ul>
     <% end %>
   </tbody>
 
