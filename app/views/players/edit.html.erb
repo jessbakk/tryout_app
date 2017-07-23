@@ -1,45 +1,47 @@
-<h1>Edit Player</h1>
+<div class="container">
+  <h3>Edit Player</h3>
 
-<%= form_for @player do |f| %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :grade %>
-    <%= f.text_field :grade %>
-  </div>
-  <div>
-    <%= f.label :number %>
-    <%= f.text_field :number %>
-  </div>
-  <div>
-    <%= f.label :position1 %>
-    <%= f.text_field :position1 %>
-  </div>
-  <div>
-    <%= f.label :position2 %>
-    <%= f.text_field :position2 %>
-  </div>
-  <div>
-    <%= f.label :position3 %>
-    <%= f.text_field :position3 %>
-  </div>
-  <div>
-    <%= f.label :coordinated %>
-    <%= f.text_field :coordinated %>
-  </div>
-  <div>
-    <%= f.label :club_exp %>
-    <%= f.text_field :club_exp %>
-  </div>
-  <div>
-    <%= f.label :team_id %>
-    <%= f.text_field :team_id %>
-  </div>
-  <%= f.file_field :image %>
-  
-  <%= f.submit "Update Player!" %>
-<% end %>
+  <%= form_for @player do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :grade %>
+      <%= f.text_field :grade %>
+    </div>
+    <div>
+      <%= f.label :number %>
+      <%= f.text_field :number %>
+    </div>
+    <div>
+      <%= f.label :position1 %>
+      <%= f.text_field :position1 %>
+    </div>
+    <div>
+      <%= f.label :position2 %>
+      <%= f.text_field :position2 %>
+    </div>
+    <div>
+      <%= f.label :position3 %>
+      <%= f.text_field :position3 %>
+    </div>
+    <div>
+      <%= f.label :coordinated %>
+      <%= f.text_field :coordinated %>
+    </div>
+    <div>
+      <%= f.label :club_exp %>
+      <%= f.text_field :club_exp %>
+    </div>
+    <div>
+      <%= f.label :team_id %>
+      <%= f.text_field :team_id %>
+    </div>
+    <%= f.file_field :image %>
+    
+    <%= f.submit "Update Player!" %>
+  <% end %>
 
-<%= link_to "Back to the list!", players_path %>
+  <%= link_to "Back to the list!", players_path %>
+</div>
