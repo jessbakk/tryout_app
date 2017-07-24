@@ -3,20 +3,17 @@ Rails.application.routes.draw do
   
 root 'players#index'
 
-  resources :players
+  resources :players do 
+      resources :comments
+  end
   
   resources :coaches, only: [:new, :create]
   
   resources :sessions, only: [:new, :create, :destroy]
-
   
   get 'signup', to: 'coaches#new'
 
   get 'login', to: 'sessions#new'
-
-  
-
-
 
 
 end

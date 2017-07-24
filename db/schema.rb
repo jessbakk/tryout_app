@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170721215840) do
+ActiveRecord::Schema.define(version: 20170724171747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20170721215840) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "comment"
+    t.bigint "coach_id"
+    t.bigint "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coach_id"], name: "index_comments_on_coach_id"
+    t.index ["player_id"], name: "index_comments_on_player_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -57,6 +67,8 @@ ActiveRecord::Schema.define(version: 20170721215840) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comments", "coaches"
+  add_foreign_key "comments", "players"
   add_foreign_key "players", "teams"
   add_foreign_key "staffs", "coaches"
   add_foreign_key "staffs", "teams"
