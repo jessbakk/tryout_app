@@ -14,18 +14,23 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="container">
-    <p class="right-align">
-      <% if current_coach %>
-        Welcome, Coach <%= current_coach.name %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
-      <% else %>
-        <%= link_to 'Log In', login_path %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Sign Up', signup_path %>
-      <% end %>
-      </p>
+  <body class="container #212121 grey darken-4">
+  <nav class="row #757575 grey darken-1">
+    <div class="container">
+      <p class="right-align">
+        <% if current_coach %>
+          Welcome, Coach <%= current_coach.name %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
+        <% else %>
+          <%= link_to 'Log In', login_path %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'Sign Up', signup_path %>
+        <% end %>
+        </p>
+      </div>
+    </nav>
+  </div>
 
 
  
