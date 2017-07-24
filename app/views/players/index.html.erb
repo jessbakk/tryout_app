@@ -28,10 +28,12 @@
           <td><%= player.coordinated %></td>
           <td><%= player.club_exp %></td>
           <td><%= player.team_id %></td>
-          <td><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Action</a>
-          <ul id='dropdown1' class='dropdown-content'>
+          <td>
+          <a class='dropdown-button btn' href='#' data-activates=<%= "dropdown#{player.id}" %>>Action</a>
+          <ul id= <%= "dropdown#{player.id}" %> class='dropdown-content'> 
               <li><%= link_to 'Edit Player', edit_player_path(player) %></li>
-          </ul>    
+              <li><%= link_to 'Delete', player_path(player), method: :delete %></li>
+          </ul>
           </td>    
         </tr>
       <% end %>

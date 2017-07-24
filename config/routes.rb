@@ -14,6 +14,8 @@ root 'players#index'
 
   get 'login', to: 'sessions#new'
 
+  
+
 
 
 
