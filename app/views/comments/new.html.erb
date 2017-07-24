@@ -1,13 +1,14 @@
-<h2 class="green-text darken-1">Add New Comment</h2>
+<div class="container white-text">
+    <h2 class="green-text darken-1">Add New Comment</h2>
 
-<%= form_for [@player, @comment] do |f| %>
-    <div>
-        <%= f.label :comment %>
-        <%= f.text_field :comment %>
+    <%= form_for [@player, @comment] do |f| %>
+        <div>
+            <%= f.label :comment %>
+            <%= f.text_field :comment %>
+        </div>
+        <p><%= current_coach.name %></p>
+        <div class="actions black-text"><%= f.submit "Save Comment" %></div>
+    <% end %>
+
     </div>
-    <p><%= current_coach.name %></p>
-    
-    <%= f.submit "Save Comment" %>
-<% end %>
-
 </div>

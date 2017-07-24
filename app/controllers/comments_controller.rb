@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
     
     def index
-        @comments = Comment.all
+        @player = Player.find(params[:player_id])
+        @comments = player.comments
     end
     
     
@@ -30,6 +31,7 @@ class CommentsController < ApplicationController
 
 
     def show
+        @player = Player.find(params[:player_id])
         @comment = Comment.find(params[:id])
     end
 

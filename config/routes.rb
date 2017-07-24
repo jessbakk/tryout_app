@@ -10,7 +10,6 @@ resources :players, shallow: true do
   end
   
   
-  
   resources :sessions, only: [:new, :create, :destroy]
   
   get 'signup', to: 'coaches#new'
