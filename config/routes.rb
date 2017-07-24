@@ -3,17 +3,22 @@ Rails.application.routes.draw do
   
 root 'players#index'
 
-  resources :players do 
-      resources :comments
+resources :coaches, only: [:new, :create]
+  
+resources :players, shallow: true do 
+    resources :comments
   end
   
-  resources :coaches, only: [:new, :create]
+  
   
   resources :sessions, only: [:new, :create, :destroy]
   
   get 'signup', to: 'coaches#new'
 
   get 'login', to: 'sessions#new'
+
+  get 'comment', to: 'comments#new'
+
 
 
 end

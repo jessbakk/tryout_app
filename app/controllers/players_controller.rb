@@ -45,8 +45,6 @@ class PlayersController < ApplicationController
         @player = Player.find(params[:id])
         @player.destroy
             redirect_to players_path
-    
-
     end
     
     def show

@@ -13,6 +13,11 @@ class CoachesController < ApplicationController
         
     end
 
+    def show
+        @coach = Coach.find(params[:id])
+    end
+    
+
     private
 
     def coach_params
