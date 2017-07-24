@@ -1,5 +1,5 @@
-<div class="container">
-  <h3>Edit Player</h3>
+<div class="container white-text">
+  <h3 class="green-text darken-1">Edit Player</h3>
 
   <%= form_for @player do |f| %>
     <div>
@@ -39,8 +39,9 @@
       <%= f.text_field :team_id %>
     </div>
     <%= f.file_field :image %>
-    
+    <div class="black-text">
     <%= f.submit "Update Player!" %>
+    </div>
   <% end %>
 
   <%= link_to "Back to the list!", players_path %>
