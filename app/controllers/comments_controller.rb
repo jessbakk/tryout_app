@@ -7,8 +7,8 @@ class CommentsController < ApplicationController
     
     
     def new
-         @comment = Comment.new
          @player = Player.find(params[:player_id])
+         @comment = Comment.new
     end
     
     def create
