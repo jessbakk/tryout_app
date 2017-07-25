@@ -19,4 +19,8 @@ class SessionsController < ApplicationController
         session[:user_id] = nil
         redirect_to players_path, notice: 'Logged out.'
     end
+
+    def show
+    end
+    
 end

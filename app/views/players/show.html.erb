@@ -27,7 +27,7 @@
       <div class="card-content white-text">
         <span class="card-title"> Coaches Comments </span>
         <ul>
-            <% @player.comments.each do |comment, coach| %>
+            <% @player.comments.each do |comment| %>
                 <li>
                     <%= comment.comment %> </li>
                     By: <%= comment.coach.name  %> &nbsp;&nbsp;

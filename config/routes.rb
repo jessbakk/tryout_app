@@ -18,6 +18,6 @@ resources :players, shallow: true do
 
   get 'comment', to: 'comments#new'
 
-
+  get 'home', to: 'sessions#show'
 
 end
