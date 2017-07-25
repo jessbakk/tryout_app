@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
 
     def show
         @player = Player.find(params[:player_id])
-        @comment = Comment.find(params[:id])
+        @comment = Comment.new
     end
 
     private

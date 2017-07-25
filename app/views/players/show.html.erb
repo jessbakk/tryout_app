@@ -26,7 +26,13 @@
     <div class="card #43a047 green darken-1">
       <div class="card-content white-text">
         <span class="card-title"> Coaches Comments </span>
-        <p>Comment: <%= @comment %></p>
+        <ul>
+            <% @player.comments.each do |comment| %>
+                <li>
+                    <%= comment.comment %> </li>
+            <% end %>
+        </ul>
+      
         <p>By: <%= current_coach.name  %></p>
       </div>
       <%= link_to "Add Comment", new_player_comment_path(@player) %>
