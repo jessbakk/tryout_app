@@ -34,7 +34,6 @@ class CommentsController < ApplicationController
         @player = Player.find(params[:player_id])
         @coach = Coach.find(param[:coach_id])
         @comment = Comment.new
-
     end
 
     private
