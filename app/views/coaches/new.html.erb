@@ -1,23 +1,33 @@
 <div class="container">
-
-    <h1>Sign Up</h1><%= form_for @coach do |f| %>
-
-    <div class="field">
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-    </div>
-    <div class="field">
-        <%= f.label :email %>
-        <%= f.text_field :email %>
-    </div>
-    <div class="field">
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-    </div>
-    <div class="field">
-        <%= f.label :pasword_confirmation %>
-        <%= f.password_field :password_confirmation %>
-    </div>
-    <div class="actions"><%= f.submit %></div>
-    <% end %>
+ <div class="row white-text">
+    <div class="col s12 m4 l2"></div>
+    <div class="col s12 m4 l8">
+          <div class="card #43a047 green darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Coach Signup</span>
+              <p id="alert"><%= alert %></p>
+              <%= form_for @coach do |f| %>
+              <div class="field">
+                  <%= f.label :name %>
+                  <%= f.text_field :name %>
+              </div>
+              <div class="field">
+                  <%= f.label :email %>
+                  <%= f.text_field :email %>
+              </div>
+              <div class="field">
+                  <%= f.label :password %>
+                  <%= f.password_field :password %>
+              </div>
+              <div class="field">
+                  <%= f.label :pasword_confirmation %>
+                  <%= f.password_field :password_confirmation %>
+              </div>
+              <div class="actions black-text"><%= f.submit %></div>
+              <% end %>
+            </div>
+            <div class="col s12 m4 l2"></div>
+          </div>
+        </div>
+      </div>
 </div>
