@@ -6,7 +6,7 @@ class CoachesController < ApplicationController
     def create
         @coach = Coach.new(coach_params)
         if @coach.save
-            redirect_to players_path
+            redirect_to home_path
         else
             render :new
         end
