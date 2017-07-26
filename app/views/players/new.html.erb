@@ -10,6 +10,10 @@
               <p id="alert"><%= alert %></p>
               <%= form_for @player do |f| %>
               <div class="field">
+                  <%= f.label "Team" %>
+                  <%= collection_select(:player, :team_id, Team.all, :id, :level) %>
+              </div>
+              <div class="field">
                   <%= f.label :name %>
                   <%= f.text_field :name %>
               </div>

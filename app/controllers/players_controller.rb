@@ -14,7 +14,7 @@ class PlayersController < ApplicationController
     
     def create
         @player = Player.new(player_params)
-        @team = Team.first.id
+        @team = Team.find
         @player[:team_id] = @team
         if @player.save
             redirect_to players_path
@@ -54,7 +54,7 @@ class PlayersController < ApplicationController
     private
 
     def player_params
-      params.require(:player).permit(:name, :grade, :number, :position1, :position2, :position3, :coordinated, :club_exp, :image)
+      params.require(:player).permit(:name, :grade, :number, :position1, :position2, :position3, :coordinated, :club_exp, :image, :team_id)
     end
 
     def set_player
