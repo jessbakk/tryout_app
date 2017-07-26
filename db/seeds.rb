@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Team.destroy_all
+
+Team.create([
+    {level: "No Team"},
+    {level: "Frosh/Soph"},
+    {level: "Junior Varsity"},
+    {level: "Varsity"}
+])
