@@ -14,14 +14,11 @@ class PlayersController < ApplicationController
     
     def create
         @player = Player.new(player_params)
-        @team = Team.find
-        @player[:team_id] = @team
         if @player.save
             redirect_to players_path
         else
             render :new
         end
-        
     end
 
 
