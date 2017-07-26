@@ -29,7 +29,7 @@
           <td><%= player.position3 %></td>
           <td><%= player.coordinated %></td>
           <td><%= player.club_exp %></td>
-          <td><%= player.team_id %></td>
+          <td><%= player.team.level %></td>
           <td>
           <a class="dropdown-button btn white blue-text" href="#" data-activates=<%= "dropdown#{player.id}" %>>Action</a>
           <ul class='dropdown-content' id= <%= "dropdown#{player.id}" %> > 
