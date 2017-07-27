@@ -15,7 +15,8 @@
  */
 
  @import "materialize";
- @import url("https://fonts.googleapis.com/css?family=Graduate");    
+ @import url("https://fonts.googleapis.com/css?family=Graduate");
+ @import url('https://fonts.googleapis.com/css?family=Oswald');    
 
 
 
@@ -27,12 +28,29 @@ body {
     background-size: cover;
 }
 
+select {
+    display: inline-block;
+}
 
 #logo {
      font-family: "Graduate", cursive;
      font-size: 40px;
 }
 
-select {
-    display: inline-block;
+#light {
+    font-family: "Oswald Extra-Light", sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    letter-spacing: -3px;
+    text-transform: uppercase;
 }
+
+#thick {
+    font-family: 'Oswald Bold', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
