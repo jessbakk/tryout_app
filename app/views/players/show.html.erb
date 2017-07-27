@@ -10,7 +10,7 @@
         <p>Club Experience: <%= @player.club_exp %></p>
         <p>Team: <%= @player.team.level %></p>
     </div>
-    <div class="col s7 pull-s5">
+    <div class="col s7 pull-s5 center-align">
       <div class="row"></div>
       <div class="row"></div>
       <div class="row"></div>
@@ -29,28 +29,28 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card #43a047 green darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"> Coaches Comments </span>
+          <div class="waves-effect waves-light btn #bdbdbd grey lighten-1">
+            <%= link_to "Add Comment", new_player_comment_path(@player) %>
+            </div>
+          <ul>
+              <% @player.comments.each do |comment| %>
+                  <li><%= comment.comment %></li>
+                      By: <%= comment.coach.name  %> &nbsp;&nbsp;
+                      <%= comment.created_at.strftime("%B %d %Y") %>
+                      <hr>
 
-<div class="row">
-  <div class="col s12">
-    <div class="card #43a047 green darken-1">
-      <div class="card-content white-text">
-        <span class="card-title"> Coaches Comments </span>
-         <div class="waves-effect waves-light btn #bdbdbd grey lighten-1">
-          <%= link_to "Add Comment", new_player_comment_path(@player) %>
-          </div>
-        <ul>
-            <% @player.comments.each do |comment| %>
-                <li><%= comment.comment %></li>
-                    By: <%= comment.coach.name  %> &nbsp;&nbsp;
-                    <%= comment.created_at.strftime("%B %d %Y") %>
-                    <hr>
-
-            <% end %>
-        </ul>
+              <% end %>
+          </ul>
+      </div>
     </div>
   </div>
 </div>
-
 
 
 

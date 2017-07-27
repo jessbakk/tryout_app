@@ -1,53 +1,57 @@
-<p class="white-text" id="notice"><%= notice %></p>
-<div class="row"></div>
-  <h4><span class="green-text darken-1">Prospect List</span></h4>
+<body class="texture">
+  <div class="container">  
+    <p class="white-text" id="notice"><%= notice %></p>
+    <div class="row"></div>
+      <h4><span class="green-text darken-1">Prospect List</span></h4>
 
-<div class="card #424242 grey darken-1">
-  <div class="card-content white-text">
-  <table>
-    <thead class="black-text">
-      <tr>
-        <th>Name</th>
-        <th>Grade</th>
-        <th>Position 1</th>
-        <th>Position 2</th>
-        <th>Position 3</th>
-        <th>Coordinated</th>
-        <th>Club Exp.</th>
-        <th>Team</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+    <div class="card #424242 grey darken-1">
+      <div class="card-content white-text">
+      <table>
+        <thead class="black-text">
+          <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Position 1</th>
+            <th>Position 2</th>
+            <th>Position 3</th>
+            <th>Coordinated</th>
+            <th>Club Exp.</th>
+            <th>Team</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-    <tbody>
-      <% @players.each do |player| %>
-        <tr>
-          <td><%= link_to player.name, player_path(player) %> </td>
-          <td><%= player.grade %></td>
-          <td><%= player.position1 %></td>
-          <td><%= player.position2 %></td>
-          <td><%= player.position3 %></td>
-          <td><%= player.coordinated %></td>
-          <td><%= player.club_exp %></td>
-          <td><%= player.team.level %></td>
-          <td>
-          <a class="dropdown-button btn white blue-text" href="#" data-activates=<%= "dropdown#{player.id}" %>>Action</a>
-          <ul class='dropdown-content' id= <%= "dropdown#{player.id}" %> > 
-              <li><%= link_to 'Edit Player', edit_player_path(player) %></li>
-              <li><%= link_to 'Delete', player_path(player), method: :delete %></li>
-          </ul>
-          </td>    
-        </tr>
-      <% end %>
-    </tbody>
-
-
-    </table>
-
+        <tbody>
+          <% @players.each do |player| %>
+            <tr>
+              <td><%= link_to player.name, player_path(player) %> </td>
+              <td><%= player.grade %></td>
+              <td><%= player.position1 %></td>
+              <td><%= player.position2 %></td>
+              <td><%= player.position3 %></td>
+              <td><%= player.coordinated %></td>
+              <td><%= player.club_exp %></td>
+              <td><%= player.team.level %></td>
+              <td>
+              <a class="dropdown-button btn white blue-text" href="#" data-activates=<%= "dropdown#{player.id}" %>>Action</a>
+              <ul class='dropdown-content' id= <%= "dropdown#{player.id}" %> > 
+                  <li><%= link_to 'Edit Player', edit_player_path(player) %></li>
+                  <li><%= link_to 'Delete', player_path(player), method: :delete %></li>
+              </ul>
+              </td>    
+            </tr>
+          <% end %>
+        </tbody>
 
 
+        </table>
 
-  <hr><hr>
-  <div class="btn white"><%= link_to "Add Player", new_player_path %></div>
+
+
+
+      <hr><hr>
+      <div class="btn white"><%= link_to "Add Player", new_player_path %></div>
+      </div>
+    </div>
   </div>
 </div>

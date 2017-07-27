@@ -20,12 +20,21 @@
 
 
 
-#welcome {
+.welcome {
     background: image-url("volleyball.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.texture {
+    background: image-url("texture.png") no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
 select {
@@ -51,6 +60,8 @@ select {
     font-weight: 700;
     text-transform: uppercase;
 }
+
+
 
 
 
