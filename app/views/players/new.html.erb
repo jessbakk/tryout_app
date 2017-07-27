@@ -1,109 +1,55 @@
-<div class="container">
- <div class="row white-text">
-   <div class="col s12 m4 l2"></div>
-   <div class="col s12 m4 l8">
-    <div class="card #424242 grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Add Player</span>
-              <p id="alert"><%= alert %></p>
-              <%= form_for @player do |f| %>
-              <div class="field black-text">
-                  <div class="white-text"<%= f.label "Team" %></div>
-                  <%= collection_select(:player, :team_id, Team.all, :id, :level) %>
-              </div>
-              <div class="field">
-                  <div class="white-text"<%= f.label :name %></div>
-                  <%= f.text_field :name %>
-              </div>
-              <div class="field">
-                  <div class="white-text"<%= f.label :grade %></div>
-                  <%= f.text_field :grade %>
-              </div>
-              <div class="field">
-                  <div class="white-text"<%= f.label :number %></div>
-                  <%= f.text_field :number %>
-              </div>
-              <div class="field">
-                  <div class="white-text"<%= f.label :coordinated %></div>
-                  <%= f.text_field :coordinated %>
-              </div>
-              <div class="field">
-                  <div class="white-text"<%= f.label :position1 %></div>
-                  <%= f.text_field :position1 %>
-              </div>
-              <div class="field">
-                  <div class="white-text"<%= f.label :position2 %></div>
-                  <%= f.text_field :position2 %>
-              </div>
-              <div class="field">
-                  <div class="white-text"<%= f.label :position3 %></div>
-                  <%= f.text_field :position3 %>
-              </div>
-              <div class="field">
-                  <div class="white-text"<%= f.label :club_exp %></div>
-                  <%= f.text_field :club_exp %>
-              </div>
-              <%= f.file_field :image %>
-              <div class="actions black-text"><%= f.submit %></div>
-              <% end %>
-            </div>
-            <div class="col s12 m4 l2"></div>
-          </div>
-        </div>
-      </div>
-</div>
+
 
 
 <div class="container">
   <div class="row">
     <div class="card #424242 grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title center-align">Add Player</span>
-        <p id="alert"><%= alert %></p>
-        <div class="col s6 center-align">
-          <%= form_for @player do |f| %>
-            <div class="field black-text">
-            <div class="white-text"<%= f.label "Team" %>
-            </div>
-              <%= collection_select(:player, :team_id, Team.all, :id, :level) %></div>
-            <div class="field">
-            <div class="white-text"<%= f.label :name %></div>
-              <%= f.text_field :name %>
-            </div>
-            <div class="field">
-            <div class="white-text"<%= f.label :grade %></div>
-              <%= f.text_field :grade %>
-            </div>
-            <div class="field">
-            <div class="white-text"<%= f.label :number %></div>
-              <%= f.text_field :number %>
-            </div>
-            <div class="field">
-            <div class="white-text"<%= f.label :coordinated %></div>
-              <%= f.text_field :coordinated %>
-            </div>
-        </div>
-        <div class="col s6 center-align">
-          <div class="field">
-          <div class="white-text"<%= f.label :position1 %></div>
-            <%= f.text_field :position1 %>
-          </div>
-          <div class="field">
-          <div class="white-text"<%= f.label :position2 %></div>
-            <%= f.text_field :position2 %>
-          </div>
-          <div class="field">
-          <div class="white-text"<%= f.label :position3 %></div>
-            <%= f.text_field :position3 %>
-          </div>
-          <div class="field">
-          <div class="white-text"<%= f.label :club_exp %></div>
-            <%= f.text_field :club_exp %>
-          </div>
-          <%= f.file_field :image %>
-          <div class="actions black-text"><%= f.submit %></div>
-          <% end %>
-          </div>
+                                    <div class="card-content white-text">
+                                    <span class="card-title center-align">Add Player</span>
+                                    <p id="alert"><%= alert %></p>
+                                        <div class="col s6 center-align">
+                                            <%= form_for @player do |f| %>
+                                            <div class="field black-text">
+                                            <div class="white-text"<%= f.label "Team" %></div>
+                                            <%= collection_select(:player, :team_id, Team.all, :id, :level) %></div>
+                                            <div class="field">
+                                            <div class="white-text"<%= f.label :name %></div>
+                                              <%= f.text_field :name %>
+                                            </div>
+                                            <div class="field">
+                                            <div class="white-text"<%= f.label :grade %></div>
+                                              <%= f.text_field :grade %>
+                                            </div>
+                                            <div class="field">
+                                            <div class="white-text"<%= f.label :number %></div>
+                                              <%= f.text_field :number %>
+                                            </div>
+                                            <div class="field">
+                                            <div class="white-text"<%= f.label :coordinated %></div>
+                                              <%= f.text_field :coordinated %>
+                                            </div>
+                                        </div>
+                                        <div class="col s6 center-align">
+                                            <div class="field">
+                                            <div class="white-text"<%= f.label :position1 %></div>
+                                              <%= f.text_field :position1 %>
+                                            </div>
+                                            <div class="field">
+                                            <div class="white-text"<%= f.label :position2 %></div>
+                                              <%= f.text_field :position2 %>
+                                            </div>
+                                            <div class="field">
+                                            <div class="white-text"<%= f.label :position3 %></div>
+                                              <%= f.text_field :position3 %>
+                                            </div>
+                                            <div class="field">
+                                            <div class="white-text"<%= f.label :club_exp %></div>
+                                              <%= f.text_field :club_exp %>
+                                            </div>
+                                            <%= f.file_field :image %>
+                                            <div class="actions black-text"><%= f.submit %></div>
+                                            <% end %>
+                                        </div>
         </div>
     </div>
   </div>
