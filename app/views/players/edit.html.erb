@@ -1,5 +1,12 @@
 <div class="container white-text">
-  <h3 class="green-text darken-1">Edit Player</h3>
+  <div class="row">
+  <div class="col s6"><h5 class="green-text darken-1">Edit Player</h5></div>
+    <div class="col s6 right-align"><div class="row"></div>
+    <div class="player-btn waves-effect waves-light btn #bdbdbd grey lighten-1">
+        <%= link_to "Back to List", players_path %>
+    </div>
+  </div>
+
 
   <%= form_for @player do |f| %>
     <div>
@@ -7,36 +14,36 @@
       <%= f.text_field :name %>
     </div>
     <div>
-      <%= f.label :grade %>
-      <%= f.text_field :grade %>
-    </div>
-    <div>
       <%= f.label :number %>
       <%= f.text_field :number %>
     </div>
-    <div>
+    <div class="field black-text">
+      <%= f.label :grade %>
+      <%= f.select :grade, ["9", "10", "11", "12"], :prompt => "Grade" %>
+    </div>
+    <div class="field black-text">
       <%= f.label :position1 %>
-      <%= f.text_field :position1 %>
+      <%= f.select :position1, ["Unassigned", "Setter", "Opposite", "Outside", "Middle Blocker", "Libero", "Defensive Specialist", "Serving Specialist", "Team Manager", "Right Bench"], :prompt => "Primary Position" %>
     </div>
-    <div>
+    <div class="field black-text">
       <%= f.label :position2 %>
-      <%= f.text_field :position2 %>
+      <%= f.select :position2, ["Unassigned", "Setter", "Opposite", "Outside", "Middle Blocker", "Libero", "Defensive Specialist", "Serving Specialist", "Team Manager", "Right Bench"], :prompt => "Second Position" %>
     </div>
-    <div>
+    <div class="field black-text">
       <%= f.label :position3 %>
-      <%= f.text_field :position3 %>
+      <%= f.select :position3, ["Unassigned", "Setter", "Opposite", "Outside", "Middle Blocker", "Libero", "Defensive Specialist", "Serving Specialist", "Team Manager", "Right Bench"], :prompt => "Third Position" %>
     </div>
-    <div>
+    <div class="field black-text">
       <%= f.label :coordinated %>
-      <%= f.text_field :coordinated %>
+      <%= f.select :coordinated, ["Yes", "No", "Has Potential", "Unknown"], :prompt => "Coordinated" %>
     </div>
-    <div>
+    <div class="field black-text">
       <%= f.label :club_exp %>
-      <%= f.text_field :club_exp %>
+      <%= f.select :club_exp, ["9", "10", "11", "12"], :prompt => "Club Experience" %>
     </div>
-    <div>
-      <%= f.label :team_id %>
-      <%= f.text_field :team_id %>
+    <div class="field black-text">
+      <%= f.label :team %>
+      <%= collection_select(:player, :team_id, Team.all, :id, :level) %>
     </div>
     <%= f.file_field :image %>
     <div class="black-text">
@@ -44,5 +51,7 @@
     </div>
   <% end %>
 
-  <%= link_to "Back to the list!", players_path %>
+  
 </div>
+
+
