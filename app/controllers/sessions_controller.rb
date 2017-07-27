@@ -2,10 +2,6 @@ class SessionsController < ApplicationController
     def new
     end
 
-    def index
-    end
-    
-    
     def create
         coach = Coach.find_by(email: params[:email])
 

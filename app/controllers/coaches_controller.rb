@@ -6,6 +6,8 @@ class CoachesController < ApplicationController
     def create
         @coach = Coach.new(coach_params)
         if @coach.save
+            session[:user_id] = @coach.id
+            flash[:notice] = "You have successfully signed up!"
             redirect_to home_path
         else
             render :new
