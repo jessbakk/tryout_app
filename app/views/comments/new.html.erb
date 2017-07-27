@@ -8,9 +8,9 @@
         <p>3rd Position: <%= @player.position3 %></p>
         <p>Coordinated: <%= @player.coordinated %></p>
         <p>Club Experience: <%= @player.club_exp %></p>
-        <p>Team: <%= @player.team_id %></p>
+        <p>Team: <%= @player.team.level %></p>
     </div>
-    <div class="col s7 pull-s5">
+    <div class="col s7 pull-s5 center-align">
       <div class="row"></div>
       <div class="row"></div>
       <div class="row"></div>
@@ -29,20 +29,21 @@
     </div>
   </div>
 </div>
-
-<div class="row">
-  <div class="col s12">
-    <div class="card #43a047 green darken-1">
-      <div class="card-content white-text">
-        <span class="card-title"> Coaches Comments </span>
-          <%= form_for [@player, @comment] do |f| %>
-            <div>
-              <%= f.label :comment %>
-              <%= f.text_field :comment %>
-            </div>
-            <div class="actions black-text"><%= f.submit "Save Comment" %></div>
-            <% end %>
-        </ul>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card #43a047 green darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"> Coaches Comments </span>
+            <%= form_for [@player, @comment] do |f| %>
+              <div>
+                <%= f.label :comment %>
+                <%= f.text_field :comment %>
+              </div>
+              <div class="actions black-text"><%= f.submit "Save Comment" %></div>
+              <% end %>
+          </ul>
+      </div>
     </div>
   </div>
 </div>
