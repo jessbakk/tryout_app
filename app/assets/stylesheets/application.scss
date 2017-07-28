@@ -44,6 +44,11 @@
     background-size: cover;
 }
 
+#nav-status {
+    position: relative;
+    margin: auto;
+}
+
 .texture {
     background: image-url("texture.png") no-repeat fixed;
     -webkit-background-size: cover;
@@ -60,6 +65,7 @@ select {
 #logo {
      font-family: "Graduate", cursive;
      font-size: 40px;
+     position: absolute;
 }
 
 #light {
