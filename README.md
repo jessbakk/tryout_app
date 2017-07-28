@@ -29,11 +29,50 @@ View each players individual bio and make changes or comments on each player to 
 
 * HTML5 
 * CSS3 
-* Rails 5.1.2
-* ruby 2.4.1p111
-* Card Deck Starter CSS
-* JavaScript
-* JQuery
+* Materialize CSS
+* Ruby 2.4.1p111
+* Ruby on Rails 5.1.2
+* Ruby Gems
+* VS Code
+* Trello for project management
+* Gimp 2.8.22 Image Manipulation Program
+* Imgur for Image Management 
+* Amazon Web Services
+* Bash Terminal
+* Git for version control
+* GitHub for remote repositories
+* PostgreSQL
+* Active Record
+
+##### Get Started
+
+Team Captain Trello Board: [Trello Board](https://trello.com/b/3sxXbpxA/like-a-spartan "Team Captain on Trello")
+
+
+Team Captain App on Heroku: [Team Captain App](https://teamcaptain.herokuapp.com/ "Team Captain on Heroku")
+
+##### Next Steps/Unsolved Issues
+
+* **Coach Assignments** - Allow for a master admin coach that can assign coaches a pass to login. At this time, the website is open for anyone to signup for an account and view the current team's page. To ensure the safety of the kids, **this needs to be resolved immediately**.
+
+* **Theme Continuity** - Mismatched action buttons that need to match the theme and style of the other pages. Not of immediate concern but a quick fix. 
+
+##### Updates/Planned Feautures
+
+* **Players Index Display Options** - On top of the display as a list, Coaches will have the ability to display all players in individual cards with quick bios (trading card style). 
+
+* **Sort By** - Allow coaches the ability to sort players by grades, last names, teams, etc.
+
+* **Team Schedule** - Addition of upcoming schedule and previous game snapshot right on the dashboard.
+
+* **Team Assignments** - Allow the coach the ability to assign teams to other coaches, where they can view their teams.
+
+* **
+
+![Sample Front Page](http://i.imgur.com/YyxLOIM.png "Front Page Sample")
+
+
+
 
 
 
