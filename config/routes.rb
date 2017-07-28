@@ -24,4 +24,6 @@ resources :players, shallow: true do
 
   get '/pages/:page', to: 'pages#show'
 
+  
+
 end
