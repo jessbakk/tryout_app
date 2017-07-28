@@ -1,40 +1,64 @@
-<p class="white-text" id="notice"><%= notice %></p>
-<div class="row"></div>
-<div class="row"></div>
-<div class="row"></div>
+<body>  
+  <div class="container">
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
 
 
-
-<h4 class="center-align white-text">Dashboard</h4>
-
-<div class="row"></div>
-<div class="row"></div>
-<div class="row"></div>
-<div class="row"></div>
-<div class="row"></div>
-
-
-<div class="row">
-  <div class="col s12 m5">
-    <div class="card #424242 grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">Current Prospects</span>
+    
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="card small">
+          <div class="card-image">
+            <%= image_tag("/assets/south.png") %>
+          </div>
+          <div class="card-content">
+            <span class="card-title grey-text text-darken-4 center">Rosters</span>
+          </div>
+          <div class="card-action center">
+            <a href="/players">Pre-season Prospects</a>
+          </div>
+        </div>
       </div>
-      <div class="card-action">
-        <a href="/players">All Players</a>
-        <a href="/players">Scouting Report</a>
+
+      <div class="col s12 m4">
+        <div class="card small">
+          <div class="card-image">
+            <%= image_tag("/assets/VolleyballDarkGym.jpg") %>
+          </div>
+          <div class="card-content">
+            <span class="card-title grey-text text-darken-4 center">Team Stats Links</span>
+          </div>
+          <div class="card-action center">
+            <a href="http://www.maxpreps.com/high-schools/south-spartans-(torrance,ca)/boys-volleyball/home.htm">MaxPreps</a>
+            <a href="http://cifss.org/">CIF SS</a>
+          </div>
+         </div>
       </div>
-    </div>
-  </div>
-  <div class="col s12 m2"></div>
-  <div class="col s12 m5">
-    <div class="card #424242 grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">Your Teams</span>
+      
+
+      <div class="col s12 m4">
+        <div class="card small">
+          <div class="card-image">
+            <%= image_tag("/assets/varsity2.png") %>
+          </div>
+          <div class="card-content">
+            <span class="card-title grey-text text-darken-4 center">Current Teams</span>
+          </div>
+          <div class="card-action center">
+            <a href="#">Varsity</a>
+            <a href="#">JV</a>
+            <a href="#">Frosh/Soph</a>
+          </div>
+
+
+
+        </div>
       </div>
-      <div class="card-action">
-        <a href="#">Varsity</a>
-        <a href="#">Junior Varsity</a>
+    
+
+
+
       </div>
     </div>
   </div>

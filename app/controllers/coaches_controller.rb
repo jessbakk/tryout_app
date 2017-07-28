@@ -8,7 +8,7 @@ class CoachesController < ApplicationController
         if @coach.save
             session[:user_id] = @coach.id
             flash[:notice] = "You have successfully signed up!"
-            redirect_to home_path
+            redirect_to root_path
         else
             render :new
         end

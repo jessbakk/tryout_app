@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
         if coach && coach.authenticate(params[:password])
             session[:user_id] = coach.id
-            redirect_to home_path, notice: 'Logged in!'
+            redirect_to pages_dashboard_path, notice: 'Logged in!'
         else 
             flash.now.alert = 'Invalid login credentials - try again!'
             render :new

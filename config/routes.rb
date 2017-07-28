@@ -22,8 +22,6 @@ resources :players, shallow: true do
 
   get 'home', to: 'sessions#show'
 
-  get '/pages/:page', to: 'pages#show'
-
-  
+  get 'pages/dashboard'
 
 end

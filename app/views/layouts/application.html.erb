@@ -6,8 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:200,700" rel="stylesheet">
-   
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,700" rel="stylesheet">   
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,7 +16,7 @@
   <div class="navbar-fixed">
     <nav class="row #000000 black">
       <div class="container">
-        <a href="/home" class="brand-logo green-text darken-1 left-align" id="logo">Team Captain</a>
+        <a href="/pages/dashboard" class="brand-logo green-text darken-1 left-align" id="logo">Team Captain</a>
         
         <p class="col s4 push-s8" id="nav-status">
           <% if current_coach %>

@@ -18,7 +18,9 @@
  @import url("https://fonts.googleapis.com/css?family=Graduate");
  @import url('https://fonts.googleapis.com/css?family=Oswald:200,700');    
 
-
+html { 
+    font-family: "Oswald Light", sans-serif
+}
 
 #welcome {
     background: image-url("volleyball.png") no-repeat center center fixed;
