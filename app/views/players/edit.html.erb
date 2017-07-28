@@ -1,21 +1,21 @@
 <div class="container">
-  <div class="row">
-    <div class="card #424242 grey darken-1">
-      <div class="card-content white-text">
-        <div class="row">
-          <div class="col s2 center-align">
-            <a href="/players"><i class="material-icons center">arrow_back</i></a>
-          </div>
-          <span class="col s10 card-title left-align">Add Player</span>
+<div class="row">
+  <div class="card #424242 grey darken-1">
+    <div class="card-content white-text">
+      <div class="row">
+        <div class="col s2 center-align">
+          <a href="/players"><i class="material-icons center">arrow_back</i></a>
         </div>
-        <p id="alert"><%= alert %></p>
-        <div class="container">
-          <div class="row">
-            <%= form_for @player do |f| %>
-            <div class="field">
-              <%= f.label :name %>
-              <%= f.text_field :name %>
-            </div>
+        <span class="col s10 card-title left-align">Add Player</span>
+      </div>
+      <p id="alert"><%= alert %></p>
+      <div class="container">
+        <div class="row">
+          <%= form_for @player do |f| %>
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </div>
           <div class="field">
             <%= f.label :number %>
             <%= f.text_field :number %>
